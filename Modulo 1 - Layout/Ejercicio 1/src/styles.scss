@@ -1,38 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
-$palettes: (
-        purple : (
-            base: #7200C9,
-            lighten1: #7200C9,
-            lighten2: #950AFF,
-            lighten3: #9E1FFF,
-            lighten4: #A733FF,
-            darken1: #6800B8,
-            darken2: #5C00A3,
-            darken3: #51008F,
-            darken4: #45007A,
-        ),
-        yellow: (
-            base: #EBBC00,
-            lighten1: #FFCE0A,
-            lighten2: #FFD21F,
-            lighten3: #FFD633,
-            lighten4: #FFDA47,
-            darken1: #E0B400,
-            darken2: #CCA300,
-            darken3: #B89300,
-            darken4: #A38300,
-        ),
-);
-
-:root {
-    @each $colorname, $palette in $palettes {
-        @each $key, $value in $palette {
-            $keyname: "--palette-" + $colorname + "-" + $key;
-            #{$keyname}: #{$value};
-        }
-    }
-}
+@import 'palettes.scss';
 
 html {
     font-family: 'Lato', sans-serif;
