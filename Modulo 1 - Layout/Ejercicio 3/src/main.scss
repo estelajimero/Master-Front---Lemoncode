@@ -1,0 +1,30 @@
+@import 'variables.scss', 'mixin.scss';
+
+body {
+    @include font-face;
+    @include reset;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @include for-desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .item-nav {
+        background-color: $primary-color;
+        color: $text-color;
+        text-align: center;
+        width: 100%;
+        padding: 1em;
+        cursor: pointer;
+    }
+
+    .item-nav:hover {
+        background-color: $secondary-color;
+    }
+}
