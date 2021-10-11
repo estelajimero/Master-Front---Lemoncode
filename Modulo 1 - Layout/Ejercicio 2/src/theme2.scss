@@ -1,0 +1,11 @@
+$base-color: hsl(0, 0%, 41%);
+$important-color: hsl(0, 0%, 16%);
+$warning-color: hsl(0, 0%, 84%);
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Playfair Display', serif;
+
+$box-shadow: 4px 3px 5px -1px rgba(88,83,83,0.75);
