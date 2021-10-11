@@ -1,4 +1,4 @@
-@use 'palettes.scss';
+@import 'palettes.scss';
 
 @font-face {
     font-family: 'Lato', sans-serif;
@@ -22,78 +22,11 @@ html {
     }
 }
 
-.container-1 {
-    .base-color {
-        background-color: var(--palette-purple-base);
-    }
 
-    .darken-4 {
-        background-color: var(--palette-purple-darken4);
-    }
-
-    .darken-3 {
-        background-color: var(--palette-purple-darken3);
-    }
-
-    .darken-2 {
-        background-color: var(--palette-purple-darken2);
-    }
-
-    .darken-1 {
-        background-color: var(--palette-purple-darken1);
-    }
-
-    .lighten-1 {
-        background-color: var(--palette-purple-lighten1);
-    }
-
-    .lighten-2 {
-        background-color: var(--palette-purple-lighten2);
-    }
-
-    .lighten-3 {
-        background-color: var(--palette-purple-lighten3);
-    }
-
-    .lighten-4 {
-        background-color: var(--palette-purple-lighten4);
-    }
+.base-color1 {
+    background-color: $base-color1;
 }
 
-.container-2 {
-    .base-color {
-        background-color: var(--palette-yellow-base);
-    }
-
-    .darken-4 {
-        background-color: var(--palette-yellow-darken4);
-    }
-
-    .darken-3 {
-        background-color: var(--palette-yellow-darken3);
-    }
-
-    .darken-2 {
-        background-color: var(--palette-yellow-darken2);
-    }
-
-    .darken-1 {
-        background-color: var(--palette-yellow-darken1);
-    }
-
-    .lighten-1 {
-        background-color: var(--palette-yellow-lighten1);
-    }
-
-    .lighten-2 {
-        background-color: var(--palette-yellow-lighten2);
-    }
-
-    .lighten-3 {
-        background-color: var(--palette-yellow-lighten3);
-    }
-
-    .lighten-4 {
-        background-color: var(--palette-yellow-lighten4);
-    }
+.base-color2 {
+    background-color: $base-color2;
 }
