@@ -1,33 +1,14 @@
-$palettes: (
-        purple : (
-            base: hsl(274, 100%, 39%),
-            lighten1: hsl(274, 100%, 44%),
-            lighten2: hsl(274, 100%, 52%),
-            lighten3: hsl(274, 100%, 56%),
-            lighten4: hsl(274, 100%, 60%),
-            darken1: hsl(274, 100%, 36%),
-            darken2: hsl(274, 100%, 32%),
-            darken3: hsl(274, 100%, 28%),
-            darken4: hsl(274, 100%, 24%),
-        ),
-        yellow: (
-            base: hsl(48, 100%, 46%),
-            lighten1: hsl(48, 100%, 52%),
-            lighten2: hsl(48, 100%, 56%),
-            lighten3: hsl(48, 100%, 60%),
-            lighten4: hsl(48, 100%, 64%),
-            darken1: hsl(48, 100%, 44%),
-            darken2: hsl(48, 100%, 40%),
-            darken3: hsl(48, 100%, 36%),
-            darken4: hsl(48, 100%, 32%),
-        ),
-);
+$base-color1: hsl(274, 100%, 39%);
+$base-color2: hsl(48, 100%, 46%);
 
-:root {
-    @each $colorname, $palette in $palettes {
-        @each $key, $value in $palette {
-            $keyname: "--palette-" + $colorname + "-" + $key;
-            #{$keyname}: #{$value};
-        }
+@for $i from 1 through 4 {
+    .darken-#{$i} {
+        background-color: darken($base-color1, 10% * $i);
+    }
+}
+
+@for $i from 1 through 4 {
+    .lighten-#{$i} {
+        background-color: lighten($base-color1, 10% * $i);
     }
 }
