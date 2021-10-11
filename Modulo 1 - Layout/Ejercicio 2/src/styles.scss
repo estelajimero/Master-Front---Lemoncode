@@ -1,0 +1,59 @@
+@import 'theme1.scss';
+// @import 'theme2.scss';
+
+html {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+
+    & div {
+        padding: 2rem;
+        font-size: 1.3em;
+    }
+
+    & p {
+        margin-right: 2rem;
+        font-size: 1.3em;
+    }
+    
+    & div:not(.shadow-style) {
+        margin-right: 1.5em;
+        color: hsl(0, 0, 100%);
+        font-family: $primary-font;
+    }
+}
+
+.base-color {
+    background-color: $base-color;
+}
+
+.important-color {
+    background-color: $important-color;
+}
+
+.warning-color {
+    background-color: $warning-color;
+}
+
+.principal-font {
+    font-family: $primary-font;
+}
+
+.secondary-font {
+    font-family: $secondary-font;
+}
+
+.shadow-style {
+    border: .1rem solid $warning-color;
+    color: $important-color;
+    box-shadow: $box-shadow;
+    font-family: $secondary-font;
+}
+
