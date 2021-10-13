@@ -1,0 +1,166 @@
+@import 'variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background: $primary-color;
+
+     & .toolbar {
+        display: none;
+    }
+
+    .page-title {
+        font-family: 'Bungee', cursive;
+        font-size: 1.5em;
+        color: hsl(0, 0, 100%);
+        background: $secondary-color;
+        padding: 1.5rem;
+    }
+}
+
+nav {
+    background: $complementary-color;
+    color: white;
+
+    & .menu-title {
+        display: none;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+
+        list-style-type: none;
+        background: hsl(0, 0, 100%);
+        padding: 1.5rem;
+        cursor: pointer;
+
+        & li {
+            color: $complementary-color;
+        }
+
+        & li:hover {
+            color: $third-color;
+            font-weight: bold;
+        }
+    }
+}
+
+main {
+    background: $primary-color;
+    padding: 2rem;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .item {
+        background-color: $card-bg;
+        padding: 1.5rem;
+        margin-bottom: .5rem;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        img {
+            object-fit: cover;
+            width: 60%;
+            margin-right: 3rem;
+        }
+
+        .member-name {
+            font-size: 2em;
+            font-weight: bold;
+        }
+    }
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: $third-color;
+}
+
+
+@media screen and (min-width: 768px) {
+    header .toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 1.5rem;
+        color: hsl(0, 0, 100%);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .page-container {
+        display: flex;
+        background-color: $primary-color;
+
+        nav {
+            position: fixed;
+            height: 100vh;
+        }
+        
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+
+            text-align: center;
+
+            .menu-title {
+                font-weight: bold;
+                padding: 1rem 1rem .5rem; 
+                display: block;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                padding: 3rem;
+
+                & li {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+
+        margin-left: 9.5rem;
+
+        .list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 1fr;
+            grid-gap: 1rem;
+        }
+
+        .item {
+
+            .member-name {
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 997px) {
+    main .list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+}
