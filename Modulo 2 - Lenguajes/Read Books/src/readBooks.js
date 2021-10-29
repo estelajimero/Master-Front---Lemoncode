@@ -13,5 +13,3 @@ let books = [
 console.log(isBookRead(books, "Devastación"));
 console.log(isBookRead(books, "Canción de hielo y fuego"));
 console.log(isBookRead(books, "Los Pilares de la Tierra"));
-
-// Opcional
