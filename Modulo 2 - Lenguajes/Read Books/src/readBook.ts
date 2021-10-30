@@ -1,13 +1,13 @@
 // Opcional
-interface Book {
-    title : string;
-    isRead: boolean;
+class Book {
+    public title: string;
+    public isRead: boolean;
 }
 
 const isBookRead = (books: Book[], titleToSearch: string) => {
     let findBook = books.find(book => book.title === titleToSearch);
 
-    return findBook?.isRead;
+    return findBook?.isRead ? true : false;
 }
 
 let books: Book[] = [
