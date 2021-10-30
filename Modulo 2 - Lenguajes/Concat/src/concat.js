@@ -15,7 +15,7 @@ concat(newArr, wordArr);
 concat(wordArr, newArr);
 
 // Opcional
-const concatMulti = (...arr) => arr.concat();
+const concatMulti = (...arr) => arr;
 
 console.log(concatMulti(newArr, wordArr, mixArr));
 console.log(concatMulti(newArr, wordArr, mixArr, objectArr));
