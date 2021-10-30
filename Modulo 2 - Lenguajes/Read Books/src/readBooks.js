@@ -1,7 +1,7 @@
 const isBookRead = (books, titleToSearch) => {
     let findBook = books.find(book => book.title === titleToSearch);
 
-    return Boolean(findBook) && findBook.isRead;
+    return findBook?.isRead ? true : false;
 }
 
 let books = [
