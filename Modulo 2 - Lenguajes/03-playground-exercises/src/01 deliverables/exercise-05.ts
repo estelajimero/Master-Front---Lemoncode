@@ -13,7 +13,7 @@ class SlotMachine {
     play() {
         this.count++;
 
-        let arrBool = [
+        let arrBool: boolean[] = [
             this.randomBool(),
             this.randomBool(),
             this.randomBool(),
