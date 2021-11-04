@@ -10,13 +10,16 @@ const objectArr: object[] = [
     }
 ];
 
-const concat = (arr1: any[], arr2: any[]) => console.log([...arr1, ...arr2]);
+type ConcatBase = <T>(arr1: T[], arr2: T[]) => T[];
+type ConcatMulti = <T>(...arr: T[]) => T[]; 
+
+const concat = (arr1, arr2) => console.log([...arr1, ...arr2]);
 
 concat(numArr, wordsArr);
 concat(wordsArr, numArr);
 
 // Opcional
-const concatMulti = (...arr: any[]) => arr;
+const concatMulti = (...arr) => arr;
 
 console.log(concatMulti(numArr, wordsArr, mixArr));
 console.log(concatMulti(numArr, wordsArr, mixArr, objectArr));

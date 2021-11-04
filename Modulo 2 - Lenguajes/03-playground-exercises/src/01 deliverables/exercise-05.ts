@@ -6,11 +6,11 @@ class SlotMachine {
         this.count = 0;
     }
 
-    randomBool() {
+    randomBool(): boolean {
         return Math.random() > 0.5;
     }
 
-    play() {
+    play(): void {
         this.count++;
 
         let arrBool: boolean[] = [

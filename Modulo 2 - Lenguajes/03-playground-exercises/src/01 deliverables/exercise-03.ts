@@ -3,7 +3,9 @@ console.log("************** CLONE / MERGE *********************");
 const a = { name: "Maria", surname: "Ibañez", country: "SPA" };
 const b = { name: "Luisa", age: 31, married: true };
 
-const clone = (source: object) : object => {
+type ObjectFun = (source: object, target?: object) => object;
+
+const clone: ObjectFun = (source) => {
     let result = {};
 
     for (let prop in source) {
@@ -16,7 +18,7 @@ const clone = (source: object) : object => {
 console.log(clone(a));
 
 // Merge
-const merge = (source: object, target: object) : object => {
+const merge: ObjectFun = (source, target) => {
     let result = clone(target);
 
     for (let prop in source) {

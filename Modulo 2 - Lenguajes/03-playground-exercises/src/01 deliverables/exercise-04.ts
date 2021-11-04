@@ -5,7 +5,9 @@ interface Book {
     isRead: boolean;
 }
 
-const isBookRead = (books: Book[], titleToSearch: string) : boolean => {
+type BookFunc = (books: Book[], titleToSearch: string) => boolean;
+
+const isBookRead: BookFunc = (books, titleToSearch) => {
     let findBook = books.find(book => book.title === titleToSearch);
 
     return findBook?.isRead ? true : false;
