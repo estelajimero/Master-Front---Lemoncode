@@ -6,7 +6,15 @@ console.log("********** CURRY SETTER **********");
 // y actualice la propiedad del objeto con el valor pasado como argumento.
 // El ejercicio debe cumplir la siguiente norma: la función debe ser pura, es decir, debe crear un nuevo objeto sin modificar el existente.
 
-const set = object => 
+type SetFunc = (object: object, propName: string, propValue: number) => object;
+
+const set: SetFunc = (object, propName, propValue) => {
+    let newObject = {...object};
+
+    newObject[propName] = propValue;
+
+    return newObject;
+}
 
 const julia = { name: "Julia", surname: "Álvarez", age: 19 };
 const updatedJulia = set(julia, "age", 25);
@@ -14,3 +22,23 @@ const updatedJulia = set(julia, "age", 25);
 console.log(updatedJulia); // { name: 'Julia', surname: 'Álvarez', age: 25 }
 console.log(julia); // { name: 'Julia', surname: 'Álvarez', age: 19 }
 console.log(julia === updatedJulia); // false
+
+
+// ## Opcional
+
+// Currifica dicha función para que permita crear funciones donde el argumento del nombre de la propiedad esté configurado previamente.
+// Es decir, modifica la función `set` para poder crear `setName`, `setSurname` y `setAge` que reciban sólo el objeto y el valor y sepan qué propiedad actualizar.
+
+// **TypeScript**: Además, si quieres, puedes extraer la firma de la interfaz sin ponerla en línea con la implementación.
+
+
+
+// const setName = set(/* ... */);
+// const setSurName = set(/* ... */);
+// const setAge = set(/* ... */);
+
+// const julia = { name: "Julia", surname: "Álvarez", age: 19 };
+
+// console.log(setName(julia, "Ana")); // { name: 'Ana', surname: 'Álvarez', age: 19 };
+// console.log(setSurname(julia, "González")); // { name: 'Julia', surname: 'González', age: 19 };
+// console.log(setAge(julia, 25)); // { name: 'Julia', surname: 'Álvarez', age: 25 }
