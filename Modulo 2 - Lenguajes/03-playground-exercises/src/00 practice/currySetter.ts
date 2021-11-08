@@ -6,7 +6,13 @@ console.log("********** CURRY SETTER **********");
 // y actualice la propiedad del objeto con el valor pasado como argumento.
 // El ejercicio debe cumplir la siguiente norma: la función debe ser pura, es decir, debe crear un nuevo objeto sin modificar el existente.
 
-type SetFunc = (object: object, propName: string, propValue: number) => object;
+interface User {
+    name: string,
+    surname: string,
+    age: number
+}
+
+type SetFunc = (object: User, propName: string, propValue: number | string) => User;
 
 const set: SetFunc = (object, propName, propValue) => {
     let newObject = {...object};
