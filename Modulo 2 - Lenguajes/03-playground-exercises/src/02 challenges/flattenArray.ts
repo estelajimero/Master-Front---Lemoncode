@@ -13,18 +13,18 @@ const sampleString: MultiArr <string> = ["Hola", "Hi", ["Hallo", "Ciao", ["Пр�
 
 const flattenArr = <T>(arr: MultiArr<T>, depth: number): T[] => arr.flat(depth);
 
-const flattenArr2 = <T>(arr: MultiArr<T>) : T[]=> {
-    return arr.reduce((acc: any[], elem: MultiArr<T>) => 
-        Array.isArray(elem) 
-        ? acc.concat(flattenArr2(elem)) 
-        : acc.concat(elem)
-    , [])
-}
+// const flattenArr2 = <T>(arr: MultiArr<T>) : T[]=> {
+//     return arr.reduce((acc: any[], elem: MultiArr<T>) => 
+//         Array.isArray(elem) 
+//         ? acc.concat(flattenArr2(elem)) 
+//         : acc.concat(elem)
+//     , [])
+// }
 
 console.log(flattenArr(sample, 5));
-console.log(flattenArr2(sample));
 console.log(flattenArr(sampleString, 4));
-console.log(flattenArr2(sampleString));
+// console.log(flattenArr2(sample));
+// console.log(flattenArr2(sampleString));
 
 
 // quedaría aplanado como:
