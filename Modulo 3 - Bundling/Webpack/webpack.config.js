@@ -76,6 +76,8 @@ module.exports = {
     ],
     devtool: "eval-source-map",
     devServer: {
-        stats: "errors-only",
+        devMiddleware: {
+            stats: "errors-only",
+        },
     },
 };
