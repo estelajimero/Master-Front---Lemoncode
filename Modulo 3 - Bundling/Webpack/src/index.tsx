@@ -12,7 +12,12 @@ img.src = landscapeImg;
 
 document.getElementById("imgContainer").appendChild(img);
 
-const contacts = [
+interface Contact {
+  id: number;
+  name: string;
+}
+
+const contacts: Contact[] = [
     { id: 1, name: "Leanne Graham" },
     { id: 2, name: "Ervin Howell" },
     { id: 3, name: "Clementine Bauch" },
