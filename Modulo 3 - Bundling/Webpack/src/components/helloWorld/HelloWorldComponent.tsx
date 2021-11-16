@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./helloWorldComponentStyles.scss";
+import { showEnv } from "../../variables";
 
 export const HelloWorldComponent = () => {
     return (
@@ -8,3 +9,5 @@ export const HelloWorldComponent = () => {
         </>
     );
 };
+
+showEnv();
