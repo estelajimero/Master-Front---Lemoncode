@@ -1,5 +1,9 @@
 import './styles.scss';
+import landscapeImg from "./content/iceland-1.jpg";
 
-const sampleNumber = 55;
+const img = document.createElement("img");
+img.src = landscapeImg;
 
-console.log(`Hello from sample ${sampleNumber}`);
+document.getElementById("imgContainer").appendChild(img);
+
+
