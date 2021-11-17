@@ -19,6 +19,7 @@ Implementar una aplicación simple que:
 ## Bonus points
 
 Alternativamente o como puntos adicionales podéis plantear desarrollar algunos de los siguientes desafíos (o proponer algún otro):
+
     - Contribuciones al repo de webpack (ejemplo, montar husky con prettier).
     - Crear un repositorio adaptando los ejemplos a parcel v2 (los que queráis hacer este reto, avisad y repartimos ejemplos).
     - Crear tu propio proyecto semilla con las tecnologías que elijas (mínimo traspilar a ES5 y dar soporte a Typescript).
