@@ -6,4 +6,8 @@ img.src = landscapeImg;
 
 document.getElementById("imgContainer").appendChild(img);
 
+const a: number = 5;
+console.log(a);
+
+
 
