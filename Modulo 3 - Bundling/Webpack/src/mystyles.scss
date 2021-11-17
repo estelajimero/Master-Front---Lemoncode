@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap");
 
 $color: rgb(5, 148, 173);
-$raleway-font: 'Raleway', sans-serif;
+$raleway-font: "Raleway", sans-serif;
 
 body {
-    font-family: $raleway-font;
+  font-family: $raleway-font;
 }
 
 img {
-    width: 400px;
-    padding-left: 1rem;
-    margin-top: 2rem;
+  width: 400px;
+  padding-left: 1rem;
+  margin-top: 2rem;
 }
