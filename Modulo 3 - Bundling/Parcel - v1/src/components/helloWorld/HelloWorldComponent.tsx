@@ -1,13 +1,10 @@
 import React from "react";
-import classes from "./helloWorldComponentStyles.scss";
-// import { showEnv } from "../../variables";
+import './helloWorldComponentStyles.scss';
 
 export const HelloWorldComponent = () => {
   return (
     <>
-      <h1 className={classes.title}>Hello World!</h1>
+      <h1 className={"title"}>Hello World!</h1>
     </>
   );
 };
-
-// showEnv();
