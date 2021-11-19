@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "rimraf dist && parcel ./src/index.html --open",
-    "start": "run-p -l  type-check:watch && start:dev",
+    "start": "run-p -l type-check:watch start:dev",
     "build": "rimraf dist && parcel ./src/index.html",
     "build:prod": "rimraf dist && parcel build ./src/index.html",
     "type-check": "tsc --noEmit",
